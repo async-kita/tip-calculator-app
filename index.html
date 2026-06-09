@@ -1,44 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="content">
+      <img
+        class="logo"
+        src="./images/logo.svg"
+        alt="Logo Splitter"
+        width="87"
+        height="54">
+      <section class="tip-calculator">
+        <h2 class="visually-hidden">Tip calculator</h2>
+        <form class="tip-calculator__form tip-form">
+          <fieldset class="tip-form__field">
+            <div class="tip-form__legend-wrapper">
+              <legend class="tip-form__legend">Bill</legend>
+              <span class="tip-form__legend-error">Can’t be zero</span>
+            </div>
+            <label
+              class="visually-hidden"
+              for="input-amount">
+              Total amount
+            </label>
+            <input
+              class="tip-form__input-number input input--dollar"
+              id="input-amount"
+              type="number"
+              inputmode="decimal"
+              placeholder="0">
+          </fieldset>
+          <fieldset class="tip-form__field">
+            <legend class="tip-form__legend">Select Tip %</legend>
+            <div class="tip-form__buttons">
+              <button
+                class="tip-form__button button"
+                type="button">
+                5%
+              </button>
+              <button
+                class="tip-form__button button"
+                type="button">
+                10%
+              </button>
+              <button
+                class="tip-form__button button"
+                type="button">
+                15%
+              </button>
+              <button
+                class="tip-form__button button"
+                type="button">
+                25%
+              </button>
+              <button
+                class="tip-form__button button"
+                type="button">
+                50%
+              </button>
+              <label
+                class="visually-hidden"
+                for="input-custom">
+                Custom percent
+              </label>
+              <input
+                class="tip-form__button input-button"
+                id="input-custom"
+                type="number"
+                inputmode="decimal"
+                placeholder="Custom">
+            </div>
+          </fieldset>
+          <fieldset class="tip-form__field">
+            <div class="tip-form__legend-wrapper">
+              <legend class="tip-form__legend">Number of People</legend>
+              <span class="tip-form__legend-error">Can’t be zero</span>
+            </div>
+            <label
+              class="visually-hidden"
+              for="input-person">
+              Total person
+            </label>
+            <input
+              class="tip-form__input-number input input--person"
+              id="input-person"
+              type="number"
+              inputmode="decimal"
+              placeholder="0">
+          </fieldset>
+        </form>
+        <div class="tip-form__result result-card">
+          <div class="result-card__item">
+            <div class="result-card__label">
+              <p class="result-card__title">Tip Amount</p>
+              <span class="result-card__subtitle">/ person</span>
+            </div>
+            <p class="result-card__price">
+              $
+              <span>0.00</span>
+            </p>
+          </div>
+          <div class="result-card__item">
+            <div class="result-card__label">
+              <p class="result-card__title">Total</p>
+              <span class="result-card__subtitle">/ person</span>
+            </div>
+            <p class="result-card__price">
+              $
+              <span>0.00</span>
+            </p>
+          </div>
+          <button
+            class="button-reset"
+            type="button"
+            disabled>
+            Reset
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
