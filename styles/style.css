@@ -134,6 +134,7 @@ fieldset {
   cursor: pointer;
   transition:
     background-color 0.2s,
+    transform 0.2s,
     color 0.2s;
 }
 
@@ -142,10 +143,13 @@ fieldset {
   outline-offset: 4px;
 }
 
+.button:active {
+  transform: scale(0.95);
+}
+
 .button.is-active {
   color: var(--green-900);
   background-color: var(--green-400);
-  pointer-events: none;
 }
 
 .button-reset {
@@ -284,6 +288,10 @@ fieldset {
   border-color: var(--orange-400);
 }
 
+.tip-form__field.has-error .input-button {
+  border-color: var(--orange-400);
+}
+
 .tip-form__legend-wrapper {
   display: flex;
   align-items: center;
@@ -365,7 +373,7 @@ fieldset {
 @media (min-width: 768px) {
   .content {
     justify-content: center;
-    padding-bottom: var(--spacing-1000);
+    padding: 0;
   }
 
   .tip-calculator {
